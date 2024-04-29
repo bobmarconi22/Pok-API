@@ -10,7 +10,7 @@ const findPoke = async() => {
   const data = await res.json();
     document.getElementById('pokemon-name').innerText = `${data.name.toUpperCase()}`;
     document.getElementById('sprite').src = `${data.sprites.front_default}`;
-    document.getElementById('pokemon-id').innerText = `${data.id}`;
+    document.getElementById('pokemon-id').innerText = `#${data.id}`;
     document.getElementById('height').innerText = `Height: ${data.height}`;
     document.getElementById('weight').innerText = `Weight: ${data.weight}`;
     data.types.forEach(type => {
